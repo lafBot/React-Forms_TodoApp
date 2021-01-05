@@ -3,15 +3,19 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <form>
-    <label>
-      <input
-        id="todo"
-        name="todo"
-        placeholder="Buy groceries ..."
-        type="text"
-        value=""
-      />
+    <label
+      for="todo"
+    >
+      New Todo:
     </label>
+      
+    <input
+      id="todo"
+      name="todo"
+      placeholder="Buy groceries ..."
+      type="text"
+      value=""
+    />
     <br />
     <br />
     <button

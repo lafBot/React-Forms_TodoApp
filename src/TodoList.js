@@ -24,6 +24,7 @@ const TodoList = () => {
     const todoComponents = todos.map(todo => (
         <Todo 
             id={todo.id} 
+            key={todo.id}
             todo={todo.todo} 
             completed={todo.completed} 
             remove={() => remove(todo.id)} 

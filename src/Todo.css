@@ -9,3 +9,8 @@ span:hover {
 .fa-trash {
     color: darkseagreen;
 }
+
+.rmvBtn {
+    padding-left: 0;
+    padding-right: 0;
+}

@@ -19,7 +19,7 @@ const NewTodoForm = ({ addTodo }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label>
+            <label htmlFor="todo">New Todo:</label>&nbsp;&nbsp;
                 <input 
                     id="todo"
                     name="todo"
@@ -29,7 +29,6 @@ const NewTodoForm = ({ addTodo }) => {
                     placeholder="Buy groceries ..."
 
                 />
-            </label>
             <br/><br/>
             <button id="addTodoBtn">Add Task</button>
         </form>

@@ -10,7 +10,7 @@ const TodoList = ({ todo, id, completed, remove, toggleComplete }) => {
                 {todo}
             </span>
             &nbsp;&nbsp;&nbsp;
-            <i className="fa fa-trash" onClick={remove}></i>
+            <button className="rmvBtn" onClick={remove}><i className="fa fa-trash"></i></button>
         </li>
     )
 }

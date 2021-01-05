@@ -1,0 +1,32 @@
+#TodoList {
+    background-color: rgb(240, 240, 255);
+    width: 450px;
+    height: 600px;
+    border: lightgrey solid 1px;
+    border-radius: 15px;
+    box-shadow: lightgrey 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+#TodoList-form {
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+#TodoList-list {
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1 {
+    color: darkseagreen;
+    text-align: center;
+    font-size: 3rem;
+}

@@ -1,13 +1,16 @@
 import './Todo.css'
-import '@fortawesome/fontawesome-free';
+import 'font-awesome/css/font-awesome.min.css';
 
-const TodoList = ({ todo, completed, remove }) => {
+
+const TodoList = ({ todo, id, completed, remove, toggleComplete }) => {
     return (
         <li className='listedTodo'>
-            <span className={completed ? 'completedTask' : 'incompleteTask'} >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span className={completed ? 'completedTask' : 'incompleteTask'} onClick={toggleComplete}>
                 {todo}
             </span>
-            <i className="fas fa-trash" onClick={remove}></i>
+            &nbsp;&nbsp;&nbsp;
+            <i className="fa fa-trash" onClick={remove}></i>
         </li>
     )
 }

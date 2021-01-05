@@ -1,3 +1,11 @@
+span:hover {
+    cursor:pointer;
+}
+
 .completedTask {
     text-decoration: line-through;
+}
+
+.fa-trash {
+    color: darkseagreen;
 }

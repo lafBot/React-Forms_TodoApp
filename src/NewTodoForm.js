@@ -11,8 +11,10 @@ const NewTodoForm = ({ addTodo }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addTodo({todo: formData, id: uuid(), completed: false});
-        setFormData('');
+        if(formData !== "" && formData !== " ") {
+            addTodo({todo: formData, id: uuid(), completed: false});
+            setFormData('');
+        }
     }
 
     return (
@@ -24,9 +26,11 @@ const NewTodoForm = ({ addTodo }) => {
                     type="text"
                     onChange={handleChange}
                     value={formData}
+                    placeholder="Buy groceries ..."
 
                 />
             </label>
+            <br/><br/>
             <button id="addTodoBtn">Add Task</button>
         </form>
     )

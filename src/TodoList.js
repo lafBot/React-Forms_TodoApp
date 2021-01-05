@@ -11,23 +11,38 @@ const TodoList = () => {
     const remove = (id) => {
         setTodos(todos => todos.filter(todo => todo.id !== id));
     }
+    const toggleComplete = (id) => {
+        let updatedTodos = todos.map(todo => {
+            if(todo.id === id) {
+                todo.completed = !todo.completed;
+            }
+            return todo;
+        })
+        setTodos(updatedTodos)
+    }
 
     const todoComponents = todos.map(todo => (
         <Todo 
-            key={todo.id}
             id={todo.id} 
             todo={todo.todo} 
             completed={todo.completed} 
-            remove={remove} 
+            remove={() => remove(todo.id)} 
+            toggleComplete={() => toggleComplete(todo.id)}
         />
         ))
 
     return (
-        <div>
-            <ul>
-                {todoComponents}
-            </ul>
-            <NewTodoForm addTodo={addTodo} />
+        <div  id="TodoList">
+            <div id="TodoList-form">
+                <h1>My Todo List</h1>
+                <NewTodoForm addTodo={addTodo} />
+            </div>
+            
+            <div id="TodoList-list">
+                <ol>
+                    {todoComponents}
+                </ol>
+            </div>
         </div>
     )
 }

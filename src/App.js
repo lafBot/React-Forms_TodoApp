@@ -1,7 +1,7 @@
 import './App.css';
 import TodoList from './TodoList';
 
-function App() {
+const App = () => {
   return (<TodoList />);
 }
 
